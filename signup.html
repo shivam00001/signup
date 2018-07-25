@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="signup.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>  
+<!--<script type="text/javascript" src="signup.js"></script>-->
+</head>
+<body >
+ <div class="wrapper">
+      <div class="wrap">
+   <div class="btn-group btn-group-justified">
+  <div class="btn-group">
+    <a href="#" class="btn btn-primary">Home</a>
+  </div>
+  <div class="btn-group">
+   <a href="login.html" class="btn btn-primary">Login</a>
+  </div>
+      </div>
+</div>
+
+  <form method="GET" action="">
+  <div class="wrap">
+  <label for="text">Username</label>
+    <input type="text" class="form-control" name="" placeholder="Enter Username" required>
+    <label for="email">Email address</label>
+    <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+    <label for="date">Date of birth</label>
+    <input type="date" class="form-control" id="date" required>
+    <label for="mobile">Mobile No.</label>
+    <input type="tel" class="form-control" id="mobile" pattern="[0-9]{3}-[0-9]{10}" placeholder="Enter mobile no." required>
+    <label for="organisation">Organisation</label>
+<input type="text" class="form-control" id="organisation" placeholder="Organisation" required>
+    <label for="password">Password</label>
+     <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" class="form-control" placeholder="Password" id="password"   title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"required>
+       <label for="confirm-password">Confirm-password</label>
+        <input id="confirm_password"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" type="password" class="form-control" placeholder="Confirm Password" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"  required>
+    <button class='submit' type="submit">Sign Up</button>
+  </div>
+      <div style="background-color:#f1f1f1" id="contain" >
+    <button type="button" class="cancelbtn">Cancel</button>
+      </div>
+</form>
+ </div>
+<script type="text/javascript">
+    function Validate() {
+        var password = $('#password').val();
+        console.log(password);
+        var confirmPassword = $('#confirm_password').val();
+        console.log(confirmPassword)
+        if (password != confirmPassword) {
+//            alert("Passwords do not match.");
+            return false;
+        }
+        return true;
+    }
+    $(".submit").click(function () {
+        setTimeout(function(){
+            var s = Validate();
+            console.log(s)
+            if(s==true){
+                alert("password match")
+            }else{
+                alert("password do not match")
+            }
+        }, 2000)
+    });
+</script>
+</body>
+</html>
