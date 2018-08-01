@@ -33,21 +33,24 @@ button:hover {
     margin-left: auto;
     margin-right: auto;
 }
-.cancelbtn {
-    width: auto;
-    padding: 12px 20px;
-    background-color: #f44336;
-    
-}
 
+.wrapper {
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*
 .container {
+    padding: 20px;
+}
+*/
+.wrap{
     padding: 20px;
 }
 
 
 span.psw {
     float: right;
-    padding-top: 20px;
 }
 .btn{
     padding: 12px;
